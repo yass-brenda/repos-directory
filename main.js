@@ -1,16 +1,31 @@
-const Http = new XMLHttpRequest();
 const url = 'http://localhost:3000/posts';
-Http.open("GET",url);
-Http.send();
 
 
-Http.open("POST",url);
-Http.send();
 
-Http.onreadystatechange = function() {
-    if(this.readyState===4 && this.status===200){
-        console.log(Http.responseText)
-    }
-}
+fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data));
 
 
+const data = {body:'UULisses',postId: 9}
+fetch(url, {
+    method: 'POST',
+    headers:{
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data),
+}).then(res => console.log(res.json()))
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
+
+
+fetch(url, {
+    method: 'POST',
+    headers:{
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({body:'bienvenida',
+        postId: 100})
+}).then(res => console.log(res.json()))
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
