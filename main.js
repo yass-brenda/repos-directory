@@ -1,31 +1,31 @@
-const url = 'http://localhost:3000/posts';
-
+const url = 'https://api.github.com/users/yass-brenda/repos?per_page=10&page=1';
 
 
 fetch(url)
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => recorrer_arreglo(data));
 
 
-const data = {body:'UULisses',postId: 9}
-fetch(url, {
-    method: 'POST',
-    headers:{
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data),
-}).then(res => console.log(res.json()))
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
+function recorrer_arreglo(array){
+    for (let i=0;i<array.length;i++){
+        let div1 = document.getElementById("nombre")
+        let div = document.createElement('div')
+        div.textContent= array[i].name
+        div1.appendChild(div)
+        console.log(array[i].per_page)
+    }
+}
 
+function boton_anterior(url){
+    let parametros = url.location.search;
+    console.log(parametros)
+    console.log(url)
+    console.log("anterior")
+}
+function boton_siguiente(url){
+    let parametros = url.location.search;
+    console.log(parametros)
+    console.log(url)
+    console.log("siguiente")
+}
 
-fetch(url, {
-    method: 'POST',
-    headers:{
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({body:'bienvenida',
-        postId: 100})
-}).then(res => console.log(res.json()))
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
