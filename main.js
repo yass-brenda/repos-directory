@@ -23,8 +23,9 @@ function boton_anterior(){
             page -= 1;
             console.log(page)
             console.log(url)
-            return  page <=1 ? console.log(url) : console.log(`${url}&page=${page}`)
+            return  page <=1 ? url : `${url}&page=${page}`
         })
+        .then(url => devolver_api(url));
 
 }
 
@@ -35,6 +36,12 @@ function boton_siguiente(){
             page += 1;
             console.log(page)
             console.log(url)
-        return console.log(`${url}&page=${page}`)})
+        return `${url}&page=${page}`})
+        .then(url => devolver_api(url));
 }
 
+function devolver_api(url){
+    fetch(url)
+        .then(response => response.json())
+        .then(data => recorrer_arreglo(data));
+}
