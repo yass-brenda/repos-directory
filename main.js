@@ -43,5 +43,15 @@ function boton_siguiente(){
 function devolver_api(url){
     fetch(url)
         .then(response => response.json())
-        .then(data => recorrer_arreglo(data));
+        .then(data => {
+            limpiar()
+            recorrer_arreglo(data)}
+            );
+}
+
+function limpiar(){
+    let contenedor_lista = document.getElementById("nombre");
+    while (contenedor_lista.firstChild) {
+        contenedor_lista.removeChild(contenedor_lista.firstChild);
+    }
 }
