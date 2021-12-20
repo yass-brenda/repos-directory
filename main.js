@@ -1,4 +1,4 @@
-const url = 'https://api.github.com/users/yass-brenda/repos?per_page=10';
+const url = 'https://api.github.com/users/yass-brenda/repos?per_page=6';
 let page=1;
 
 fetch(url)
@@ -9,11 +9,11 @@ fetch(url)
 
 function recorrer_arreglo(array){
     for (let i=0;i<array.length;i++){
-        let div1 = document.getElementById("nombre")
+        let contenedor_lista = document.getElementById("lista")
         let div = document.createElement('div')
         div.className += ' items_lista';
         div.textContent= array[i].name
-        div1.appendChild(div)
+        contenedor_lista.appendChild(div)
     }
 }
 
