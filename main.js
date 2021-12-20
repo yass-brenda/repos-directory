@@ -11,6 +11,7 @@ function recorrer_arreglo(array){
     for (let i=0;i<array.length;i++){
         let div1 = document.getElementById("nombre")
         let div = document.createElement('div')
+        div.className += ' items_lista';
         div.textContent= array[i].name
         div1.appendChild(div)
     }
