@@ -9,7 +9,7 @@
 header {
     display: flex;
     flex-direction: row;
-    background: thistle;
+    background: #F6F8FF;
     align-items: center;
     justify-content: center;
     height: 200px;
@@ -18,28 +18,35 @@ header {
 .section_search {
     display: flex;
     flex-direction: row;
-    background: gainsboro;
+    background: #F6F8FF;
     align-items: center;
     justify-content: center;
     height: 150px
 }
 
-.section_input_search {
-    width: 50%;
+.section_search_input {
+    width: 80%;
     height: 50%;
     border-radius: 10px ;
     font-family: 'Open Sans', sans-serif;
     color: #4B6A9B;
-    font-size: 22px;
+    font-size: 24px;
+    background-color: #FEFEFE;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    border: none;
 }
 
-.icon-search {
+.icon_search {
     background-image: url(images/icon-search.svg);
     background-repeat: no-repeat;
-    background-position: 10px center;
-    padding-left: 50px;
+    background-position: 20px center;
+    padding-left: 60px;
     outline: none;
-    margin: 10px;
+    margin: 30px;
+}
+
+::placeholder {
+    color: #4b6a9b
 }
 
 body {
@@ -54,15 +61,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: palegoldenrod;
+    background-color: #F6F8FF;
 }
 
-.card {
-    background-color: #4B6A9B;
+.card_main_info {
+    background-color: #FEFEFE;
     width: 80%;
     height: 1200px;
     margin: 25px;
     border-radius: 15px;
+    box-shadow:  0px 4px 4px 0px rgba(0,0,0,0.25);
 }
 
 .personal_information {
@@ -71,8 +79,8 @@ body {
     justify-content: space-between;
 }
 
-.container_imagen {
-    background-color: white;
+.container_image {
+    background-color: #FEFEFE;
     width: 50%;
     height: 350px;
     margin: 20px;
@@ -91,30 +99,32 @@ body {
 .bio {
     flex-direction: row;
     display: flex;
-    margin: 20px;
-    background: yellow;
+    margin: 0 20px 20px 20px;
+    background-color: #FEFEFE;
     height: 100px;
 }
 
-.info_bio {
+.bio_info {
     font-family: 'Space Mono', monospace;
     font-size: 24px;
-    color: #4b6a9b;
-    margin: 25px;
+    color: #4B6A9B;
+    margin-left: 30px;
 }
 
-.estadisticas {
-    background-color: pink;
+
+.statistics {
+    background-color: #F6F8FF;
     height: 150px;
     margin: 20px;
     flex-direction: row;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 20px;
 }
 
-.contact {
-    background-color: pink;
+.information_contact {
+    background-color: #FEFEFE;
     height: 350px;
     margin: 20px;
     display: flex;
@@ -122,7 +132,7 @@ body {
     justify-content: space-evenly;
 }
 
-.container_contact {
+.information_contact_container {
     display: flex;
     flex-direction: row;
 }
@@ -135,17 +145,21 @@ body {
 
 h1 {
     font-family: 'Space Mono', monospace;
+    color: #2B3442;
+    font-size: 24px;
+    margin-bottom: 6px;
 }
 
 .username {
     font-family: 'Space Mono', monospace;
-    color: #0079ff;
-    font-size: 24px;
+    color: #0079FF;
+    font-size: 22px;
+    margin-bottom: 6px;
 }
 
 .date {
     font-family: 'Space Mono', monospace;
-    font-size: 20px;
+    font-size: 22px;
     color: #4b6a9b;
 }
 
@@ -153,18 +167,21 @@ h1 {
     font-size: 26px;
     font-weight: bold;
     color: #2b3442;
+    font-family: 'Space Mono', monospace;
     margin: 10px;
 }
 
-.estaditicas_encabezado {
-    color: #4b6a9b;
-    font-size: 20px;
+.statistics_label {
+    font-family: 'Space Mono', monospace;
+    color: #4B6A9B;
+    font-size: 22px;
 }
-.container_state {
+
+.statistics_container_state {
     width: 20%;
 }
 
-.img_user {
+.image_user {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -174,27 +191,32 @@ h1 {
 .icons {
     width: 40px;
     height: 40px;
-    margin: 15px;
+    margin: 10px 20px 20px 30px;
 }
 
 .contain_botton {
     flex-direction: row;
     display: flex;
-    margin: 20px;
+    margin: 30px;
     align-items: center;
-    background: yellow;
-
+    background: #FEFEFE ;
 }
 
-.boton_lista {
+.botton_lista {
     height: 80px;
     width: 100%;
     border-radius: 20px;
     font-size: 20px;
+    color: #FEFEFE;
+    outline: none;
+    border:none;
+    background-color: #0079FF;;
     font-family: 'Space Mono', monospace;
     font-weight: bolder;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
 }
+
 footer {
-    background-color: red;
-    height: 200px;
+    height: 100px;
+    background-color: #F6F8FF;
 }
