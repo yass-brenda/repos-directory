@@ -2,26 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Consulta apis</title>
-    <link rel="stylesheet"  href="style.css">
+    <title>Infomación de Github</title>
+    <link rel="stylesheet"  href="general_info.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
-<script src="main.js"></script>
 <body>
     <header>
-        <h1>Repositorios</h1>
+        <h1>Github overview</h1>
     </header>
     <section class="section_search">
-        <input class="section_input_search icon-search" placeholder="Username of github ...">
+        <input class="section_search_input icon_search" placeholder="Search github username...">
     </section>
-    <section id="lista" class="main_list">
+    <section class="card_main">
+        <div class="card_main_info">
+            <div class="personal_information">
+                <div class="container_image">
+                    <img class="image_user" src="images/default_image_profile.png">
+                </div>
+                <div class="container_data">
+                    <h1>Diego Ulisses Barrios</h1>
+                    <p class="username">@Diego</p>
+                    <p class="date">Joined 25 Jan 2011</p>
+                </div>
+            </div>
+            <div class="bio">
+                <p class="bio_info">This profile has no bio</p>
+            </div>
+            <div class="statistics">
+                <div class="statistics_container_state">
+                    <p class="statistics_label">Repos</p>
+                    <p class="data_number">50</p>
+                </div>
+                <div class="statistics_container_state">
+                    <p class="statistics_label">Followers</p>
+                    <p class="data_number">36</p>
+                </div>
+                <div class="statistics_container_state">
+                    <p class="statistics_label">Following</p>
+                    <p class="data_number" >86</p>
+                </div>
+            </div>
+            <div class="information_contact">
+                <div class="information_contact_container">
+                    <img class="icons" src="images/icon-location.svg">
+                    <p class="data_contact">Location</p>
+                </div>
+                <div class="information_contact_container">
+                    <img class="icons" src="images/icon-website.svg">
+                    <p class="data_contact">Location</p>
+                </div>
+                <div class="information_contact_container">
+                    <img class="icons" src="images/icon-twitter.svg">
+                    <p class="data_contact">Location</p>
+                </div>
+                <div class="information_contact_container">
+                    <img class="icons" src="images/icon-company.svg">
+                    <p class="data_contact">Location</p>
+                </div>
+            </div>
+            <div class="contain_botton">
+                <button class="botton_lista">Ver lista de repositorios</button>
+            </div>
+        </div>
+    </section>
 
-    </section>
     <footer>
-        <button id="siguiente" onclick="boton_siguiente()">Siguiente</button>
-        <button id="anterior" onclick="boton_anterior()">Anterior</button>
     </footer>
+
 </body>
 </html>
