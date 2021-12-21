@@ -15,6 +15,14 @@ header {
     height: 100px;
 }
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
 .section_search {
     display: flex;
     flex-direction: row;
@@ -49,19 +57,11 @@ header {
 
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    min-height: 100vh;
-}
-
 .items_lista {
     background-color: #4B6A9B;
     width: 80%;
     height: 200px;
     margin: 5px;
-
 }
 
 footer {

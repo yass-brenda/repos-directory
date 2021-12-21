@@ -6,13 +6,16 @@ fetch(url)
     .then(data => recorrer_arreglo(data));
 
 
-
 function recorrer_arreglo(array){
     for (let i=0;i<array.length;i++){
         let contenedor_lista = document.getElementById("lista")
         let div = document.createElement('div')
         div.className += ' items_lista';
         div.textContent= array[i].name
+        div.textContent= array[i].description
+        div.textContent= array[i].svn_url
+        div.textContent= array[i].languages_url
+        div.textContent= array[i].created_at
         contenedor_lista.appendChild(div)
     }
 }
