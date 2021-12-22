@@ -141,6 +141,9 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
+    color: #4B6A9B;
+    font-size: 22px;
+    font-family: 'Space Mono', monospace;;
 }
 
 h1 {
