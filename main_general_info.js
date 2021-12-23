@@ -44,6 +44,7 @@ function add_username(username) {
 function add_bio(bio) {
     let bio_profile = document.getElementById("info_bio");
     bio_profile.innerText = bio;
+    bio === null ? bio_profile.innerText="This profile has no bio" : bio_profile.innerText = bio;
 }
 
 function add_repos(repos) {
@@ -63,24 +64,38 @@ function add_following(following){
 
 function add_location(location) {
     let location_profile = document.getElementById("location")
-    location_profile.innerText = location;
+    let icon_location = document.getElementById("icon_location")
+    validate_null(location,location_profile,icon_location)
 }
 
 function add_twitter(twitter) {
-    let twitter_profile = document.getElementById("twitter")
-    twitter_profile.innerText = twitter;
+    let twitter_profile = document.getElementById("twitter");
+    let icon_twitter = document.getElementById("icon_twitter")
+    validate_null(twitter,twitter_profile,icon_twitter)
 }
 
 function add_company(company) {
     let company_profile = document.getElementById("company")
-    company_profile.innerText = company;
+    let icon_company = document.getElementById("icon_company")
+    validate_null(company,company_profile,icon_company)
 }
-
 
 function add_page(page) {
     let page_profile = document.getElementById("website")
-    page_profile.innerText = page;
+    let icon_website = document.getElementById("icon_website")
+    validate_null(page,page_profile,icon_website)
 }
+
+function validate_null(data,data_html,icon_html){
+    if(data === null || data ===""){
+        data_html.innerText = "Not available";
+        data_html.className += ' opacity'
+        icon_html.className += ' opacity'
+    } else {
+        data_html.innerText = data;
+    }
+}
+
 
 function add_date(date) {
     let date_profile = document.getElementById("date")
