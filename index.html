@@ -14,10 +14,13 @@
     </header>
     <section class="section_search">
         <input id="input_search" class="section_search_input icon_search" placeholder="Search github username...">
+        <span id="text-icon">↩</span>
+        <div id="animated-icon"></div>
+        <span id="error" class="error-text">No dejes vacio este campo</span>
     </section>
     <section class="card_main">
-        <div class="card_main_info">
-            <div class="personal_information">
+        <div id="card_main_info" class="card_main_info">
+            <div id="container_personal_information" class="personal_information">
                 <div class="container_image">
                     <img id="profile_image" class="image_user" src="images/default_image_profile.png">
                 </div>
@@ -27,10 +30,10 @@
                     <p id="date" class="date">Joined 25 Jan 2011</p>
                 </div>
             </div>
-            <div class="bio">
+            <div id="container_bio" class="bio">
                 <p id="info_bio" class="bio_info">This profile has no bio</p>
             </div>
-            <div class="statistics">
+            <div id="container_statistics" class="statistics">
                 <div class="statistics_container_state">
                     <p class="statistics_label">Repos</p>
                     <p id="repos" class="data_number">50</p>
@@ -44,7 +47,7 @@
                     <p id="following" class="data_number" >86</p>
                 </div>
             </div>
-            <div class="information_contact">
+            <div id="container_information_contact" class="information_contact">
                 <div class="information_contact_container">
                     <img id="icon_location" class="icons" src="images/icon-location.svg">
                     <p id="location" class="data_contact">Mexico, Zacatecas</p>
@@ -63,7 +66,7 @@
                     <p id="company" class="data_contact">None</p>
                 </div>
             </div>
-            <div class="contain_botton">
+            <div id="container_button" class="contain_botton">
                 <button class="botton_lista">See list of repositories</button>
             </div>
         </div>
